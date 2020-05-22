@@ -1,0 +1,30 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter var';
+  font-named-instance: 'Regular';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('/fonts/Inter-roman.var.woff2?v=3.12') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter var';
+  font-named-instance: 'Italic';
+  font-style: italic;
+  font-weight: 100 900;
+  src: url('/fonts/Inter-italic.var.woff2?v=3.12') format('woff2');
+}
+
+#canvas {
+  display: block;
+  height: 420px;
+  margin: 0rem auto;
+  width: 720px;
+}
