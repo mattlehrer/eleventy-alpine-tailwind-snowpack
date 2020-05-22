@@ -1,7 +1,7 @@
 {
-  "name": "kah-hv-shop",
+  "name": "11st-starter-kit",
   "version": "0.0.1",
-  "description": "A webshop to order key duplicates from companies like EMKA.",
+  "description": "11ty + Snowpack + tailwindcss",
   "engines": {
     "node": "12.x.x",
     "npm": "6.x.x"
@@ -9,7 +9,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:stefanfrede/kah-hv.git"
+    "url": "git@github.com:stefanfrede/11st-starter-kit.git"
   },
   "keywords": [
     "11ty",
@@ -22,9 +22,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/stefanfrede/kah-hv/-/issues"
+    "url": "https://github.com/stefanfrede/11st-starter-kit/issues"
   },
-  "homepage": "https://kah.frede.io/",
+  "homepage": "https://11st-starter-kit.netlify.app",
   "browserslist": [
     "defaults",
     "maintained node versions",
