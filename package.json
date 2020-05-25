@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
-    "@snowpack/plugin-parcel": "^0.8.0",
+    "@snowpack/plugin-parcel": "^0.8.2",
     "cssnano": "^4.1.10",
     "eleventy-plugin-error-overlay": "^0.1.2",
     "liquidjs": "^9.12.0",
@@ -69,7 +69,7 @@
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "rimraf": "^3.0.2",
-    "snowpack": "^2.0.0-rc.9",
+    "snowpack": "^2.0.0-rc.11",
     "tailwindcss": "^1.4.6"
   },
   "webDependencies": {
