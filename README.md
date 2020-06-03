@@ -14,17 +14,25 @@ dependencies.
 
 ## Available Scripts
 
-### npm start
+### Development
 
-Runs the app in the development mode.
+```bash
+# runs the app in the development mode.
+npm start
+```
+
 Open http://localhost:8080 to view it in the browser.
 
 The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-### npm run build
+### Production
 
-Builds a static copy of your site to the `dist/` folder.
+```bash
+# builds a static copy of your site to the `dist/` folder.
+npm run build
+```
+
 Your app is ready to be deployed!
 
 To increase the production performance
