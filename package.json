@@ -60,6 +60,7 @@
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@snowpack/plugin-parcel": "^1.0.0",
+    "canvas-confetti": "^1.2.0",
     "cssnano": "^4.1.10",
     "eleventy-plugin-error-overlay": "^0.1.2",
     "liquidjs": "^9.12.0",
@@ -71,8 +72,5 @@
     "rimraf": "^3.0.2",
     "snowpack": "^2.0.3",
     "tailwindcss": "^1.4.6"
-  },
-  "webDependencies": {
-    "canvas-confetti": "^1.2.0"
   }
 }
