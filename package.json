@@ -24,7 +24,6 @@
   "bugs": {
     "url": "https://github.com/stefanfrede/11st-starter-kit/issues"
   },
-  "homepage": "https://11st-starter-kit.netlify.app",
   "browserslist": [
     "defaults",
     "maintained node versions",
