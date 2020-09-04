@@ -57,6 +57,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "@babel/core": "^7.11.6",
     "@snowpack/plugin-build-script": "^2.0.6",
     "@snowpack/plugin-run-script": "^2.1.1",
     "@snowpack/plugin-webpack": "^2.0.6",
