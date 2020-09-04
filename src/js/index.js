@@ -5,7 +5,11 @@
 
 import confetti from 'canvas-confetti';
 
-confetti.create(document.getElementById('canvas'), {
-  resize: true,
-  useWorker: true,
-})({ particleCount: 100, spread: 160 });
+const canvas = document.getElementById('canvas');
+
+if (canvas) {
+  confetti.create(canvas, {
+    resize: true,
+    useWorker: true,
+  })({ particleCount: 100, spread: 160 });
+}
