@@ -44,13 +44,13 @@
     "babel-eslint": "^10.1.0",
     "browserslist": "^4.14.2",
     "core-js": "^3.6.5",
-    "eslint": "^7.8.1",
+    "eslint": "^7.9.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.1.1",
-    "stylelint": "^13.7.0",
+    "stylelint": "^13.7.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-order": "^4.1.0"
@@ -59,9 +59,9 @@
     "@11ty/eleventy": "^0.11.0",
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
-    "@snowpack/plugin-build-script": "^2.0.6",
-    "@snowpack/plugin-run-script": "^2.1.1",
-    "@snowpack/plugin-webpack": "^2.0.8",
+    "@snowpack/plugin-build-script": "^2.0.7",
+    "@snowpack/plugin-run-script": "^2.1.2",
+    "@snowpack/plugin-webpack": "^2.0.12",
     "@tailwindcss/typography": "^0.2.0",
     "canvas-confetti": "^1.2.0",
     "cssnano": "^4.1.10",
@@ -73,7 +73,7 @@
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "rimraf": "^3.0.2",
-    "snowpack": "^2.10.3",
-    "tailwindcss": "^1.8.6"
+    "snowpack": "^2.11.1",
+    "tailwindcss": "^1.8.9"
   }
 }
