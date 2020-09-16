@@ -33,7 +33,6 @@
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf build && rimraf dist",
-    "prepare": "snowpack",
     "start": "run-s clean start:*",
     "start:snowpack": "snowpack dev",
     "build": "run-s clean build:*",
