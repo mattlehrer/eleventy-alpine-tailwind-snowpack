@@ -18,7 +18,16 @@
   </head>
   <body class="py-16 bg-white">
     <div class="px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-center mb-8 text-gray-900">
+      <a
+        class="absolute top-0 left-0 p-4 z-50 text-white"
+        href="#maincontent"
+      >
+        Skip to main
+      </a>
+      <h1 class="flex items-center justify-center mb-8 text-gray-900">
+        <span class="sr-only">
+          1ty, powered by Snowpack with tailwindcss.
+        </span>
         <svg
           class="w-16 h-16 mx-2 sm:w-20 sm:h-20 sm:mx-4 fill-current"
           aria-hidden="true"
@@ -116,10 +125,10 @@
             5.775-2.928-.732-5.022-2.857-7.34-5.21-3.773-3.83-8.143-8.265-17.685-8.265z"
           />
         </svg>
-      </div>
-      <div class="prose prose-lg mx-auto text-center">
+      </h1>
+      <main id="maincontent" class="prose prose-lg mx-auto text-center">
         {{ content }}
-      </div>
+      </main>
     </div>
 
     <script type="module" src="/_dist_/index.js"></script>
