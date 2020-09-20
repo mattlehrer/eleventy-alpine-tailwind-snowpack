@@ -5,7 +5,7 @@ module.exports = {
     purgeLayersByDefault: true,
     removeDeprecatedGapUtilities: true,
   },
-  purge: ['./src/**/*.liquid', './src/**/*.md'],
+  purge: ['./src/**/*.html', './src/**/*.md'],
   theme: {
     extend: {
       fontFamily: {
