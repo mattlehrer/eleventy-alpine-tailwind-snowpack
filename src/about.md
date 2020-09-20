@@ -1,6 +1,6 @@
 ---
 layout: default
-title: '11ty + Snowpack + tailwind starter kit :: About'
+title: '11ty + Snowpack + Tailwind CSS :: About'
 ---
 
 # About
