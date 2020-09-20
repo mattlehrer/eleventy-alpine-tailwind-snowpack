@@ -1,7 +1,6 @@
 {
   "name": "11st-starter-kit",
-  "version": "0.0.1",
-  "description": "11ty + Snowpack + tailwindcss",
+  "description": "11ty + Snowpack + Tailwind CSS",
   "engines": {
     "node": "12.x.x",
     "npm": "6.x.x"
