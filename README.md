@@ -33,11 +33,17 @@ You will also see any lint errors in the console.
 npm run build
 ```
 
-Your app is ready to be deployed!
+```bash
+# serve the content from the `dist/` folder.
+npm run build:serve
+```
 
-To increase the production performance
-[@snowpack/plugin-webpack](https://github.com/pikapkg/snowpack/tree/%40snowpack/app-template-11ty%401.7.4/packages/%40snowpack/plugin-webpack)
-is added to the `snowpack.config.json` config file.
+Open http://localhost:8080 to view it in the browser.
+
+If you are happy with what you are seeing your code is ready to be deployed!
+
+To increase the production performance builds are optimized via
+[@snowpack/plugin-webpack](https://github.com/pikapkg/snowpack/tree/%40snowpack/app-template-11ty%401.7.4/packages/%40snowpack/plugin-webpack).
 
 ## Netlify
 
