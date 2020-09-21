@@ -9,8 +9,8 @@ with [Tailwind CSS](https://tailwindcss.com).
 ## Install Dependencies
 
 First, make sure you have `npm` (packaged with
-[Node.js](https://nodejs.org)) installed, then run `npm i` to install the
-dependencies.
+[Node.js](https://nodejs.org)) installed, then run `npm run setup` to install
+the dependencies and validate that everything is running correctly.
 
 ## Available Scripts
 
@@ -47,6 +47,7 @@ Netlify very quickly, just click the button below and follow the instructions.
 [<img src="https://www.netlify.com/img/deploy/button.svg" />](https://app.netlify.com/start/deploy?repository=https://github.com/stefanfrede/11st-starter-kit)
 
 ### Add some Netlify helpers
+
 Netlify Dev adds the ability to use Netlify redirects, proxies, and serverless functions.
 
 ```bash
