@@ -43,12 +43,12 @@
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf build && rimraf dist",
+    "serve": "serve --no-clipboard --listen 8080 dist",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "start": "run-s clean start:*",
     "start:snowpack": "snowpack dev --open none",
     "build": "run-s clean build:snowpack",
     "build:snowpack": "snowpack build",
-    "build:serve": "serve --no-clipboard --listen 8080 dist",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --ext src/**/*.js,.html src/",
     "lint:prettier": "prettier \"src/**/*.js\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
