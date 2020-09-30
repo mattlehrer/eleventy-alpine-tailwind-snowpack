@@ -17,6 +17,7 @@
     [
       "@snowpack/plugin-optimize", {
         "minifyCSS": false,
+        "preloadModules": true,
         "target": "es2020"
       }
     ]
