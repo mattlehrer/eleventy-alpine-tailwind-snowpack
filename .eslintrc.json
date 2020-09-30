@@ -23,12 +23,6 @@
     "html"
   ],
   "settings": {
-    "import/resolver": {
-      "node": {
-        "moduleDirectory": [
-          "web_modules"
-        ]
-      }
-    }
+    "import/external-module-folders": ["node_modules", "web_modules"]
   }
 }

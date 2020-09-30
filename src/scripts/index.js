@@ -1,7 +1,5 @@
-// eslint-disable-next-line
 import confetti from 'canvas-confetti';
 
-// eslint-disable-next-line
 import 'alpinejs';
 
 const canvas = document.getElementById('canvas');
