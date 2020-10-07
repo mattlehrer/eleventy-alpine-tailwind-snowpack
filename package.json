@@ -39,13 +39,13 @@
     }
   },
   "lint-staged": {
-    "*.{md,html}": "prettier --write",
-    "*.css": "stylelint --fix",
-    "*.js": "eslint --fix"
+    "*.{css,js,html}": "stylelint --fix",
+    "*.{js,html}": "eslint --fix"
   },
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf build && rimraf dist",
+    "lighthouse": "lighthouse http://localhost:8080 --output=html --output-path=./report.html --view",
     "serve": "serve --no-clipboard --listen 8080 dist",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "start": "run-s clean start:*",
@@ -54,11 +54,9 @@
     "build:snowpack": "snowpack build",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --ext src/**/*.js,.html src/",
-    "lint:prettier": "prettier \"src/**/*.js\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
     "lint:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css src/**/*.scss",
     "format": "run-s format:*",
     "format:eslint": "eslint --ext src/**/*.js,.html src/ --fix",
-    "format:prettier": "prettier \"src/**/*.js\" --write",
     "format:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css --fix",
     "validate": "run-s build lint",
     "setup": "npm install && npm run validate"
@@ -75,6 +73,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.3.0",
+    "lighthouse": "^6.4.1",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "serve": "^11.3.2",
@@ -89,7 +88,7 @@
     "@babel/preset-env": "^7.11.5",
     "@snowpack/plugin-build-script": "^2.0.8",
     "@snowpack/plugin-optimize": "^0.2.3",
-    "@snowpack/plugin-run-script": "^2.1.4",
+    "@snowpack/plugin-run-script": "^2.1.5",
     "@tailwindcss/typography": "^0.2.0",
     "alpinejs": "^2.7.0",
     "autoprefixer": "^10.0.1",
@@ -100,7 +99,7 @@
     "postcss-100vh-fix": "^1.0.2",
     "postcss-cli": "^8.0.0",
     "rimraf": "^3.0.2",
-    "snowpack": "^2.13.2",
-    "tailwindcss": "^1.8.10"
+    "snowpack": "^2.13.3",
+    "tailwindcss": "^1.8.11"
   }
 }
