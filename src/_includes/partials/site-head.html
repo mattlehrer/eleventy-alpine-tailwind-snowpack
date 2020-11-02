@@ -34,14 +34,14 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="{{ social_image }}" />
   <meta name="twitter:image" content="{{ social_image }}" />
-  <meta property="og:image:alt" content="Page image for {{ site_name }}" />
-  <meta name="twitter:image:alt" content="Page image for {{ site_name }}" />
+  <meta property="og:image:alt" content="Page image for {{ site.name }}" />
+  <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
 {% endif %}
 
-{% if meta_desc %}
-  <meta name="description" content="{{ meta_desc }}" />
-  <meta name="twitter:description" content="{{ meta_desc }}" />
-  <meta property="og:description" content="{{ meta_desc }}" />
+{% if meta.desc %}
+  <meta name="description" content="{{ meta.desc }}" />
+  <meta name="twitter:description" content="{{ meta.desc }}" />
+  <meta property="og:description" content="{{ meta.desc }}" />
 {% endif %}
 
 <meta name="theme-color" content="#4a5568" />
