@@ -50,7 +50,7 @@
     "serve": "serve --no-clipboard --listen 8080 dist",
     "dev": "run-s clean dev:*",
     "dev:snowpack": "snowpack dev",
-    "build": "run-s clean build:snowpack",
+    "build": "run-s clean build:*",
     "build:snowpack": "snowpack build",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --ext .js --ext .html src/",
