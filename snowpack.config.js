@@ -1,6 +1,6 @@
 module.exports = {
   mount: {
-    build: { url: '/', static: true },
+    'src/_site': { url: '/', static: true },
     'src/scripts': { url: '/scripts' },
     'src/styles': { url: '/styles' },
   },
@@ -13,13 +13,6 @@ module.exports = {
         watch: '$1 --watch',
       },
     ],
-    [
-      '@snowpack/plugin-optimize',
-      {
-        preloadModules: true,
-        target: 'es2020',
-      },
-    ],
   ],
   installOptions: {
     NODE_ENV: true,
@@ -30,5 +23,13 @@ module.exports = {
   },
   devOptions: {
     open: 'none',
+  },
+  experiments: {
+    optimize: {
+      bundle: true,
+      minify: true,
+      target: 'es2020',
+    },
+    source: 'skypack',
   },
 };
