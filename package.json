@@ -52,10 +52,10 @@
     "build:snowpack": "snowpack build",
     "build:sw": "workbox generateSW",
     "lint": "run-s lint:*",
-    "lint:eslint": "eslint --ext .js --ext .html src/",
+    "lint:eslint": "eslint --ext .js,.html src/",
     "lint:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css",
     "format": "run-s format:*",
-    "format:eslint": "eslint --ext .js --ext .html src/ --fix",
+    "format:eslint": "eslint --ext .js,.html src/ --fix",
     "format:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css --fix",
     "validate": "run-s build lint",
     "setup": "npm install && npm run validate"
