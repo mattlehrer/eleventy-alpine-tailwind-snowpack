@@ -3,9 +3,9 @@
 ## TODO
 
 - [x] [Eleventy Image plugin](https://www.11ty.dev/docs/plugins/image/)
-- [ ] Home page copy
 - [x] Blog post list formatting
 - [x] Head and meta [setup](https://github.com/scottishstoater/jamstack-web-starter/blob/master/src/_includes/head.njk)
+- [ ] Home page copy
 
 ## Inspiration
 
