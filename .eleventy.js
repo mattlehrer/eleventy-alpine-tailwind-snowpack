@@ -30,9 +30,7 @@ module.exports = function (eleventyConfig) {
 
   // Static assets to pass through
   eleventyConfig.addPassthroughCopy({ './src/static': '/' });
-  eleventyConfig.addPassthroughCopy('./src/fonts');
   // eleventyConfig.addPassthroughCopy('./src/images');
-  eleventyConfig.addPassthroughCopy('./src/manifest.json');
   // eleventyConfig.addPassthroughCopy('./src/robots.txt');
 
   const { DateTime } = require('luxon');
