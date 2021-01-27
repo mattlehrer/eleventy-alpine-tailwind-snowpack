@@ -1,0 +1,132 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
+<!-- Based on https://tailwindui.com/components/application-ui/layout/media-objects#component-ef9df725bf54aa2d268260c36ef2bbb5 -->
+
+<nav x-data="{ open: false }" class="mt-6 mb-10 sm:my-16">
+  <div class="">
+    <div class="flex space-x-4 sm:space-x-6">
+      <div class="self-start flex-shrink-0">
+        <a href="/">
+          {% if page.url === '/' %} {% image "src/images/default_img.png",
+          "Photo of Matt", "mt-2 sm:mt-1 h-20 w-20 sm:h-32 sm:w-32 rounded-xl
+          shadow" %} {% else %} {% image "src/images/default_img.png", "Photo of
+          Matt", "mt-2 sm:mt-1 h-20 w-20 sm:h-32 sm:w-32 rounded-xl shadow" %}
+          {% endif %}
+        </a>
+      </div>
+      <div class="self-start">
+        <div class="flex flex-row items-center justify-between">
+          <h1
+            id="nav-name"
+            class="text-3xl font-medium align-middle sm:text-4xl"
+          >
+            Matt Lehrer
+          </h1>
+          <div class="flex items-center -mr-2 sm:hidden">
+            <!-- Mobile menu button -->
+            <button
+              @click="open = true"
+              class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!-- Icon when menu is closed. -->
+              <!--
+								Heroicon name: menu
+
+								Menu open: "hidden", Menu closed: "block"
+							-->
+              <svg
+                x-show="!open"
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <!-- Icon when menu is open. -->
+              <!--
+								Heroicon name: x
+
+								Menu open: "block", Menu closed: "hidden"
+							-->
+              <svg
+                x-show="open"
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="mt-1 mr-2 tracking-tight sm:pr-12 sm:mr-0">
+          Dad. Husband. Beta and taste tester. I'm
+          <a href="http://www.quicksilvercre.com"
+            >helping real estate investors</a
+          >
+          avoid spending as much time in Excel as I have.
+          <a href="mailto:hi@mattlehrer.com">Say hi.</a>
+        </p>
+        <p id="nav-pages" class="hidden h-11 sm:flex sm:space-x-8 sm:flex-wrap">
+          {% for entry in navPages %}
+          <a
+            href="{{ entry.url }}"
+            class="{{'border-yellow-600 text-gray-900 dark:text-gray-50' if entry.url in page.url
+							else 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-50'}}"
+          >
+            {{ entry.title }}
+          </a>
+          {% endfor %}
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--
+    Mobile menu, toggle classes based on menu state.
+
+    Menu open: "block", Menu closed: "hidden"
+  -->
+  <div
+    x-show.transition.in.duration.200ms.origin.top.right.scale.85.out.duration.100ms.origin.top.right.scale.85="open"
+    @click.away="open = false"
+    class="block -mx-6 sm:hidden"
+  >
+    <div class="py-3 space-y-1">
+      <a
+        href="/"
+        class="block pr-10 text-right py-2 border-r-4 text-base font-medium
+				{{'bg-yellow-50 dark:bg-yellow-300 dark:text-yellow-900 border-yellow-500 text-yellow-700' if page.url === '/'
+				else 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 dark:text-gray-300'}}"
+        >Home</a
+      >
+      {% for entry in navPages %}
+      <a
+        href="{{ entry.url }}"
+        class="block pr-10 text-right py-2 border-r-4 text-base font-medium
+							{{'bg-yellow-50 dark:bg-yellow-300 dark:text-yellow-900 border-yellow-500 text-yellow-700' if entry.url in page.url
+							else 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 dark:text-gray-300'}}"
+      >
+        {{ entry.title }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</nav>

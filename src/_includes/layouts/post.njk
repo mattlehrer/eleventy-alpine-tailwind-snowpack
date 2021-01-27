@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="max-w-xl prose dark:prose-light lg:prose-lg">
+	<h2>{{ title }}</h2>
+	<div class="mb-8 -mt-4 text-base font-extralight">
+		Posted: {{ created | readableDate }}, Last updated:
+		{{ page.date | readableDate }}
+	</div>
+	<div class="font-serif font-normal dark:font-light">
+		{{ content | safe }}
+	</div>
+</article>

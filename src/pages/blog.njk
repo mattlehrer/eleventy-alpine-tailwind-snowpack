@@ -1,0 +1,30 @@
+---
+title: Thoughts
+layout: layouts/base.njk
+permalink: /blog/
+eleventyNavigation:
+  key: Thoughts
+  order: 1
+---
+
+<h2>A mix of short and long form thoughts</h2>
+{% set posts = collections.posts %}
+<ul class="space-y-6">
+	{% for post in posts %}
+
+	<div class="">
+		<a href="{{ post.url | url }}" class="block mt-1">
+			<p class="inline font-medium">
+				{{ post.data.title }}
+			</p>
+			<span class="text-sm text-gray-500 dark:text-gray-300"> - </span>
+			<time
+				class="text-sm text-gray-600 font-extralight dark:text-gray-300"
+				datetime="{{ post.date | readableDate }}"
+				>{{ post.date | readableDate }}</time
+			>
+		</a>
+	</div>
+
+	{% endfor %}
+</ul>

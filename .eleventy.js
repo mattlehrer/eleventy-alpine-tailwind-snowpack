@@ -7,8 +7,8 @@ async function imageShortcode(src, alt, classList, sizes) {
     widths: [25, 213, 320, 480, 640, 768, 960, 1024, 1366, 1440, 1600, 1920],
     formats: ['avif', 'webp', null],
     svgShortCircuit: true,
-    outputDir: './dist/assets/img/',
-    urlPath: '/assets/img/',
+    outputDir: 'src/_site/images/',
+    urlPath: '/images/',
   });
 
   let imageAttributes = {
@@ -28,14 +28,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
-  eleventyConfig.setLiquidOptions({
-    dynamicPartials: true,
-  });
-
   // Static assets to pass through
-  eleventyConfig.addPassthroughCopy({ 'src/static': '/' });
+  eleventyConfig.addPassthroughCopy({ './src/static': '/' });
   eleventyConfig.addPassthroughCopy('./src/fonts');
-  eleventyConfig.addPassthroughCopy('./src/images');
+  // eleventyConfig.addPassthroughCopy('./src/images');
   eleventyConfig.addPassthroughCopy('./src/manifest.json');
   // eleventyConfig.addPassthroughCopy('./src/robots.txt');
 
@@ -79,9 +75,9 @@ module.exports = function (eleventyConfig) {
       output: 'src/_site',
     },
     passthroughFileCopy: true,
-    templateFormats: ['html', 'md', 'liquid', 'njk'],
-    htmlTemplateEngine: 'liquid',
-    dataTemplateEngine: 'liquid',
-    markdownTemplateEngine: 'liquid',
+    templateFormats: ['html', 'md', 'njk'],
+    htmlTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk',
   };
 };

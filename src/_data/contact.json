@@ -1,0 +1,20 @@
+{
+	"items": [
+		{
+			"name": "hi@mattlehrer.com",
+			"link": "mailto:hi@mattlehrer.com"
+		},
+		{
+			"name": "Twitter",
+			"link": "https://twitter.com/mattlehrer"
+		},
+		{
+			"name": "GitHub",
+			"link": "https://github.com/mattlehrer"
+		},
+		{
+			"name": "LinkedIn",
+			"link": "https://linkedin.com/u/mattlehrer"
+		}
+	]
+}
