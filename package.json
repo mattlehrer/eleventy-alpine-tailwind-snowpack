@@ -1,47 +1,9 @@
 {
-  "name": "11st-starter-kit",
-  "description": "11ty, powered by Snowpack with Tailwind CSS and Alpine.js.",
-  "version": "1.0.0",
-  "engines": {
-    "node": "14.x.x",
-    "npm": "6.x.x"
-  },
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:stefanfrede/11st-starter-kit.git"
-  },
-  "keywords": [
-    "alpinjs",
-    "eleventy",
-    "netlify",
-    "snowpack",
-    "tailwindcss"
-  ],
+  "name": "mattlehrer.com-eleventy-snowpack",
+  "description": "code for mattlehrer.com built with eleventy, tailwind, alpinejs, and snowpack.",
   "author": {
-    "name": "Stefan Frede",
-    "email": "stefan@frede.dev"
-  },
-  "license": "MIT",
-  "private": true,
-  "bugs": {
-    "url": "https://github.com/stefanfrede/11st-starter-kit/issues"
-  },
-  "homepage": "https://11st-starter-kit.netlify.app",
-  "browserslist": [
-    "defaults",
-    "maintained node versions",
-    "> 5%"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.{css,js,html}": "stylelint --fix",
-    "*.{js,html}": "eslint --fix"
+    "name": "Matt Lehrer",
+    "email": "hi@mattlehrer.com"
   },
   "scripts": {
     "clean": "rimraf src/_site",
@@ -60,8 +22,38 @@
     "validate": "run-s build lint",
     "setup": "npm install && npm run validate"
   },
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.x.x",
+    "npm": "6.x.x"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mattlehrer/mattlehrer.com-eleventy-snowpack"
+  },
+  "license": "ISC",
+  "private": true,
+  "homepage": "https://www.mattlehrer.com",
+  "browserslist": [
+    "defaults",
+    "maintained node versions",
+    "> 5%"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{css,js,html}": "stylelint --fix",
+    "*.{js,html}": "eslint --fix"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-img": "^0.7.8",
+    "@11ty/eleventy-navigation": "^0.1.6",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@snowpack/plugin-postcss": "^1.1.0",
@@ -92,6 +84,7 @@
     "workbox-cli": "^6.0.2"
   },
   "dependencies": {
-    "alpinejs": "^2.8.0"
+    "alpinejs": "^2.8.0",
+    "turbolinks": "^5.2.0"
   }
 }

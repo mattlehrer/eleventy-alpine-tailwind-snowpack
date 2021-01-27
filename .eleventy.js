@@ -1,19 +1,65 @@
 const fs = require('fs');
+const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+const Image = require('@11ty/eleventy-img');
 
-module.exports = function (config) {
-  config.setLiquidOptions({
+async function imageShortcode(src, alt, classList, sizes) {
+  let metadata = await Image(src, {
+    widths: [25, 213, 320, 480, 640, 768, 960, 1024, 1366, 1440, 1600, 1920],
+    formats: ['avif', 'webp', null],
+    svgShortCircuit: true,
+    outputDir: './dist/assets/img/',
+    urlPath: '/assets/img/',
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    class: classList,
+    loading: 'lazy',
+    decoding: 'auto',
+  };
+
+  return Image.generateHTML(metadata, imageAttributes, {
+    whitespaceMode: 'inline',
+  });
+}
+
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
+
+  eleventyConfig.setLiquidOptions({
     dynamicPartials: true,
   });
 
   // Static assets to pass through
-  config.addPassthroughCopy('./src/fonts');
-  config.addPassthroughCopy('./src/images');
-  config.addPassthroughCopy('./src/favicon.ico');
-  config.addPassthroughCopy('./src/manifest.json');
-  config.addPassthroughCopy('./src/robots.txt');
+  eleventyConfig.addPassthroughCopy({ 'src/static': '/' });
+  eleventyConfig.addPassthroughCopy('./src/fonts');
+  eleventyConfig.addPassthroughCopy('./src/images');
+  eleventyConfig.addPassthroughCopy('./src/manifest.json');
+  // eleventyConfig.addPassthroughCopy('./src/robots.txt');
+
+  const { DateTime } = require('luxon');
+
+  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, {
+      zone: 'utc',
+    }).toFormat('yy-MM-dd');
+  });
+
+  eleventyConfig.addFilter('readableDate', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, {
+      zone: 'utc',
+    }).toLocaleString(DateTime.DATE_MED);
+  });
+
+  // future default and makes intuitive sense
+  // https://www.11ty.dev/docs/data-deep-merge/
+  eleventyConfig.setDataDeepMerge(true);
 
   // 404
-  config.setBrowserSyncConfig({
+  eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: function (err, browserSync) {
         const content_404 = fs.readFileSync('dist/404.html');
@@ -33,7 +79,7 @@ module.exports = function (config) {
       output: 'src/_site',
     },
     passthroughFileCopy: true,
-    templateFormats: ['html', 'md', 'liquid'],
+    templateFormats: ['html', 'md', 'liquid', 'njk'],
     htmlTemplateEngine: 'liquid',
     dataTemplateEngine: 'liquid',
     markdownTemplateEngine: 'liquid',

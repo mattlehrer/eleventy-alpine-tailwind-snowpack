@@ -28,7 +28,7 @@ jobs:
         uses: jakepartusch/wait-for-netlify-action@v1
         id: netlify
         with:
-          site_name: '11st-starter-kit'
+          site_name: 'mattlehrer.com-eleventy-snowpack'
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v3
         with:
