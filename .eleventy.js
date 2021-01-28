@@ -19,7 +19,6 @@ module.exports = function (eleventyConfig) {
   // 404
   eleventyConfig.setBrowserSyncConfig({
     files: ['_site/**/*', 'src/styles/*', 'src/scripts/*'],
-    open: true,
     // from https://github.com/turbolinks/turbolinks/issues/147#issuecomment-236443089
     snippetOptions: {
       rule: {
@@ -29,9 +28,10 @@ module.exports = function (eleventyConfig) {
         },
       },
     },
+    // 404 redirects don't seem to work with snowpack
     callbacks: {
       ready: function (err, browserSync) {
-        const content_404 = fs.readFileSync('dist/404.html');
+        const content_404 = fs.readFileSync('_site/404.html');
 
         browserSync.addMiddleware('*', (req, res) => {
           // Provides the 404 content without redirect.

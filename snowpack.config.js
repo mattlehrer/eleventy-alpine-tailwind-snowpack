@@ -23,7 +23,7 @@ module.exports = {
     out: 'dist',
   },
   devOptions: {
-    open: 'none',
+    open: 'none', // set to '**Default**' to open browser on run
   },
   optimize: {
     bundle: true,
