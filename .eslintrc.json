@@ -20,9 +20,7 @@
     "node": true,
     "es6": true
   },
-  "plugins": [
-    "html"
-  ],
+  "plugins": ["html"],
   "settings": {
     "import/external-module-folders": ["node_modules", "web_modules"]
   }

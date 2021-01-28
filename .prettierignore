@@ -1,1 +1,7 @@
 node_modules
+*.txt.njk
+.history
+.snowpack
+dist
+_site
+.tern-project
