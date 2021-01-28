@@ -7,7 +7,7 @@ async function imageShortcode(src, alt, classList, sizes) {
     widths: [25, 213, 320, 480, 640, 768, 960, 1024, 1366, 1440, 1600, 1920],
     formats: ['avif', 'webp', null],
     svgShortCircuit: true,
-    outputDir: 'src/_site/images/',
+    outputDir: '_site/images/',
     urlPath: '/images/',
   });
 
@@ -70,7 +70,7 @@ module.exports = function (eleventyConfig) {
   return {
     dir: {
       input: 'src',
-      output: 'src/_site',
+      output: '_site',
     },
     passthroughFileCopy: true,
     templateFormats: ['html', 'md', 'njk'],

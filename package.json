@@ -6,7 +6,7 @@
     "email": "hi@mattlehrer.com"
   },
   "scripts": {
-    "clean": "rimraf src/_site",
+    "clean": "rimraf _site",
     "serve": "serve --no-clipboard --listen 8080 dist",
     "dev": "NODE_ENV=development run-s clean dev:*",
     "dev:snowpack": "snowpack dev",
