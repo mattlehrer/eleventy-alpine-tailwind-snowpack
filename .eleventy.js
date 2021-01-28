@@ -54,6 +54,17 @@ module.exports = function (eleventyConfig) {
 
   // 404
   eleventyConfig.setBrowserSyncConfig({
+    files: ['_site/**/*', 'src/styles/*', 'src/scripts/*'],
+    open: true,
+    // from https://github.com/turbolinks/turbolinks/issues/147#issuecomment-236443089
+    snippetOptions: {
+      rule: {
+        match: /<\/head>/i,
+        fn: function (snippet, match) {
+          return snippet + match;
+        },
+      },
+    },
     callbacks: {
       ready: function (err, browserSync) {
         const content_404 = fs.readFileSync('dist/404.html');
