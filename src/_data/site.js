@@ -5,7 +5,7 @@ module.exports = {
   author: 'Matt Lehrer',
   metadata: {
     twitter: '@mattlehrer',
-    default_img: '/img/default_img.png',
+    default_img: '/images/default_img.png',
   },
   env: process.env.ELEVENTY_ENV === 'production',
 };
