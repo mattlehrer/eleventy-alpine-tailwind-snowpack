@@ -3,45 +3,19 @@
 @tailwind utilities;
 
 @font-face {
+  font-display: optional;
   font-family: 'Jost';
   font-style: normal;
   font-weight: 100 900;
-  src: url('../fonts/Jost-VariableFont_wght.ttf') format('truetype');
-}
-
-/* @font-face {
-	font-family: 'Jost';
-	font-style: normal;
-	font-weight: 500;
-	src: url('../fonts/Jost-Medium.ttf') format('truetype');
-} */
-
-/* @font-face {
-	font-family: 'Bitter';
-	font-style: normal;
-	font-weight: 200;
-	src: url('../fonts/Bitter-ExtraLight.ttf') format('truetype');
+  src: url('/fonts/Jost-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'Bitter';
-	font-style: normal;
-	font-weight: 300;
-	src: url('../fonts/Bitter-Light.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Bitter';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/Bitter-Regular.ttf') format('truetype');
-} */
-
-@font-face {
+  font-display: optional;
   font-family: 'Bitter';
   font-style: normal;
   font-weight: 100 900;
-  src: url('../fonts/Bitter-VariableFont_wght.ttf') format('truetype');
+  src: url('/fonts/Bitter-VariableFont_wght.ttf') format('truetype');
 }
 
 h1,
@@ -76,19 +50,18 @@ ol#work {
 
 ol#work > li {
   display: table-row;
-  height: 4rem;
+  height: 3.25rem;
   margin: 1.5rem 0;
 }
 
 ol#work > li::before {
   content: attr(seq);
   display: table-cell;
-
-  /* width: 4.5rem; */
+  @apply text-xs sm:text-sm font-mono;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   ol#work > li {
     height: 3rem;
   }
-}
+} */

@@ -4,15 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: [
-          'Bitter',
-          'ui-serif',
-          'Georgia',
-          'Cambria',
-          '"Times New Roman"',
-          'Times',
-          'serif',
-        ],
+        serif: ['Bitter', 'ui-serif', 'serif'],
       },
       gridTemplateRows: {
         layout: 'auto 1fr auto',
