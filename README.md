@@ -1,11 +1,11 @@
-# mattlehrer.com source, built with eleventy, tailwind, alpinejs, and snowpack
+# mattlehrer.com source, built with eleventy, tailwind, alpinejs, turbolinks, and snowpack
 
 ## TODO
 
 - [x] [Eleventy Image plugin](https://www.11ty.dev/docs/plugins/image/)
 - [x] Blog post list formatting
 - [x] Head and meta [setup](https://github.com/scottishstoater/jamstack-web-starter/blob/master/src/_includes/head.njk)
-- [ ] Home page copy
+- [ ] [Tag pages](https://github.com/11ty/eleventy-base-blog/blob/master/tags.njk)
 
 ## Inspiration
 
