@@ -1,5 +1,4 @@
 import 'alpinejs';
-import 'turbolinks';
 
 const env = document.querySelector('body').dataset.env;
 

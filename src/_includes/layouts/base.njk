@@ -4,7 +4,7 @@
 		{% include "../components/head.njk" %}
 		<title>{{ title }}</title>
 		<link rel="stylesheet" type="text/css" href="/styles/index.css" />
-		<script type="module" src="/scripts/index.js" defer></script>
+		<script type="module" src="/scripts/turbolinks.js" defer></script>
 	</head>
 	<body class="grid max-w-2xl min-h-screen grid-cols-1 px-6 grid-rows-layout sm:px-12 sm:mx-auto md:px-0 dark:bg-gray-800 dark:text-gray-50 {{ 'debug-screens' if env.dev }}">
 			{% include "../components/navigation.njk" %}
@@ -13,5 +13,7 @@
 			</main>
 			{% include "../components/footer.njk" %}
 		</div>
+
+		<script type="module" src="/scripts/index.js" defer></script>
 	</body>
 </html>
