@@ -3,15 +3,66 @@ title: Home
 layout: layouts/base.njk
 ---
 
-<div class="max-w-2xl mx-auto space-y-8">
-	<div>
-		<p>
-      This is the project's home page. There is a little styling for
-      demonstration purposes only.
-    </p>
-		<p>
-      The navigation might as well be a sidebar, or a floating menu. This
-      template provides the structure, make it yours ✌️
-    </p>
-	</div>
+<div class="max-w-2xl mx-auto space-y-6">
+  <p>
+    I've built financial models for advertising-based and SaaS tech businesses,
+    cannabis manufacturing, gourmet mushroom farming, service businesses, and
+    retailers. Real estate investments have been some of the most fun and
+    interesting.
+  </p>
+  <p>
+    Now, I'm building
+    <a href="https://www.quicksilvercre.com"> Quicksilver CRE</a> to help real
+    estate investors answer all the questions on risk, upside, and more that
+    they have about their opportunities without Excel.
+  </p>
+  <p>
+    If you want to talk about any interesting project or just vent about Excel,
+    <a href="mailto:hi@mattlehrer.com">let me know!</a>
+  </p>
+
+	<section>
+
+  <h2 class="mt-12 mb-3 text-xl sm:text-2xl"><a href="/blog/">Latest blog posts</a></h2>
+
+  {% set posts = collections.posts | reverse | batch(3) | first %}
+  <ul class="space-y-3">
+    {% for post in posts %}
+
+    <li class="">
+      <a href="{{ post.url | url }}" class="">
+        {{ post.data.title }}
+      </a>
+      <span class="text-sm text-gray-500 dark:text-gray-300"> - </span>
+      <time
+        class="text-sm text-gray-600 font-extralight dark:text-gray-300"
+        datetime="{{ post.date | readableDate }}"
+        >{{ post.date | readableDate }}</time
+      >
+    </li>
+
+    {% endfor %}
+  </ul>
+</section>
+<section>
+
+	<h2 class="mt-12 mb-3 text-xl sm:text-2xl"><a href="/books/">Latest book notes</a></h2>
+	{% set books = collections.books | reverse | batch(3) | first %}
+  <ul class="space-y-3">
+    {% for book in books %}
+
+    <li class="">
+      <a href="{{ book.url | url }}" class="">
+        {{ book.data.title }}
+      </a>
+      <span class="text-sm text-gray-500 dark:text-gray-300"> - </span>
+      <time
+        class="text-sm text-gray-600 font-extralight dark:text-gray-300"
+        datetime="{{ book.date | readableDate }}"
+        >{{ book.date | readableDate }}</time
+      >
+    </li>
+
+    {% endfor %}
+</section>
 </div>
