@@ -1,6 +1,21 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<link
+  rel="preload"
+  href="/fonts/Jost-VariableFont_wght.ttf"
+  as="font"
+  type="font/ttf"
+  crossOrigin="anonymous"
+/>
+
+<link
+  href="/fonts/Bitter-VariableFont_wght.ttf"
+  as="font"
+  type="font/ttf"
+  crossOrigin="anonymous"
+/>
+
 <!-- based on https://github.com/scottishstoater/jamstack-web-starter/blob/master/src/_includes/head.njk which is based on https://htmlhead.dev -->
 
 <!-- Set the base URL for all relative URLs within the document -->
@@ -11,10 +26,10 @@
   This content *may* be used as a part of search engine results. 
 -->
 <meta
-	name="description"
-	content="{% if description %}{{ description }}{% else %}{{
-		site.description
-	}}{% endif %}"
+  name="description"
+  content="{% if description %}{{ description }}{% else %}{{
+    site.description
+  }}{% endif %}"
 />
 
 <!-- Control the behavior of search engine crawling and indexing -->
@@ -44,24 +59,24 @@
 <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 <meta property="og:type" content="website" />
 <meta
-	property="og:title"
-	content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}"
+  property="og:title"
+  content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}"
 />
 {% if site.metadata.default_img or featured_image %}
 <meta
-	property="og:image"
-	content="{% if env == 'production' %}{{
-		site.url
-	}}{% endif %}{% if featured_image  %}{{ featured_image }}{% else %}{{
-		site.metadata.default_img
-	}}{% endif %}"
+  property="og:image"
+  content="{% if env == 'production' %}{{
+    site.url
+  }}{% endif %}{% if featured_image  %}{{ featured_image }}{% else %}{{
+    site.metadata.default_img
+  }}{% endif %}"
 />
 {% endif %}
 <meta
-	property="og:description"
-	content="{% if description %}{{ description }}{% else %}{{
-		site.description
-	}}{% endif %}"
+  property="og:description"
+  content="{% if description %}{{ description }}{% else %}{{
+    site.description
+  }}{% endif %}"
 />
 <meta property="og:site_name" content="{{ site.title }}" />
 <meta property="og:locale" content="en_US" />
