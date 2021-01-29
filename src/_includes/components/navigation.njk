@@ -39,6 +39,7 @@
               <svg
                 x-show="!open"
                 class="w-6 h-6"
+                x-bind:class="{ 'block': !open, 'hidden': open }"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -60,7 +61,8 @@
 							-->
               <svg
                 x-show="open"
-                class="w-6 h-6"
+                class="hidden w-6 h-6"
+                x-bind:class="{ 'block': open, 'hidden': !open }"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -107,7 +109,8 @@
   <div
     x-show.transition.in.duration.200ms.origin.top.right.scale.85.out.duration.100ms.origin.top.right.scale.85="open"
     @click.away="open = false"
-    class="block -mx-6 sm:hidden"
+    x-bind:class="{ 'block': open, 'hidden': !open }"
+    class="hidden -mx-6 sm:hidden"
   >
     <div class="py-3 space-y-1">
       <a
