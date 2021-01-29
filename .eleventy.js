@@ -5,6 +5,8 @@ const { htmlDateString, readableDate } = require('./utils/dateFormatters');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.setQuietMode(true);
+
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
   eleventyConfig.addPassthroughCopy({ './src/static': '/' });
 
@@ -29,17 +31,17 @@ module.exports = function (eleventyConfig) {
       },
     },
     // 404 redirects don't seem to work with snowpack
-    callbacks: {
-      ready: function (err, browserSync) {
-        const content_404 = fs.readFileSync('_site/404.html');
+    // callbacks: {
+    //   ready: function (err, browserSync) {
+    //     const content_404 = fs.readFileSync('_site/404.html');
 
-        browserSync.addMiddleware('*', (req, res) => {
-          // Provides the 404 content without redirect.
-          res.write(content_404);
-          res.end();
-        });
-      },
-    },
+    //     browserSync.addMiddleware('*', (req, res) => {
+    //       // Provides the 404 content without redirect.
+    //       res.write(content_404);
+    //       res.end();
+    //     });
+    //   },
+    // },
   });
 
   return {
@@ -47,7 +49,7 @@ module.exports = function (eleventyConfig) {
       input: 'src',
       output: '_site',
     },
-    passthroughFileCopy: true,
+    // passthroughFileCopy: true,
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
   };
