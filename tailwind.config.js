@@ -78,6 +78,7 @@ module.exports = {
     extend: {
       borderWidth: ['hover'],
       borderRadius: ['hover'],
+      borderStyle: ['hover'],
       fontWeight: ['dark'],
       typography: ['dark'],
     },

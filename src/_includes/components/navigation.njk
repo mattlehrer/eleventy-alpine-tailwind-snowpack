@@ -77,7 +77,7 @@
             </button>
           </div>
         </div>
-        <p class="mt-1 mr-2 tracking-tight sm:pr-12 sm:mr-0">
+        <p class="pr-10 mt-1 mr-2 tracking-tight sm:pr-12 sm:mr-0">
           Dad. Husband. Beta and taste tester. I'm
           <a href="http://www.quicksilvercre.com"
             >helping real estate investors</a
@@ -85,12 +85,12 @@
           avoid spending as much time in Excel as I have.
           <a href="mailto:hi@mattlehrer.com">Say hi.</a>
         </p>
-        <p id="nav-pages" class="hidden h-11 sm:flex sm:space-x-8 sm:flex-wrap">
+        <p id="nav" class="hidden h-11 sm:flex sm:space-x-8 sm:flex-wrap">
           {% for entry in navPages %}
           <a
             href="{{ entry.url }}"
-            class="{{'border-yellow-600 text-gray-900 dark:text-gray-50' if entry.url in page.url
-							else 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-50'}}"
+            class="{{'border-yellow-600 text-gray-900 dark:text-gray-50 border-solid' if entry.url in page.url
+							else 'text-gray-500 border-gray-400 dark:border-gray-300 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-50 hover:border-solid'}}"
           >
             {{ entry.title }}
           </a>
