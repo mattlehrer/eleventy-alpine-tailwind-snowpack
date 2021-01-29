@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-display: optional;
+  font-display: swap;
   font-family: 'Bitter';
   font-style: normal;
   font-weight: 100 900;
