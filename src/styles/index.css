@@ -2,29 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-display: optional;
-  font-family: 'Jost';
-  font-style: normal;
-  font-weight: 100 900;
-  src: url('/fonts/Jost-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Bitter';
-  font-style: normal;
-  font-weight: 100 900;
-  src: url('/fonts/Bitter-VariableFont_wght.ttf') format('truetype');
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Jost', sans-serif;
+  font-family: Jost, sans-serif;
 }
 
 main > h2 {
