@@ -71,6 +71,13 @@ module.exports = {
             },
           ],
         },
+        DEFAULT: {
+          css: {
+            h2: {
+              fontWeight: '500',
+            },
+          },
+        },
       }),
     },
   },
