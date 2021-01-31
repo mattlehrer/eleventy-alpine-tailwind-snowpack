@@ -1,7 +1,11 @@
 const fs = require('fs');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const { imageShortcode } = require('./utils/imageShortcode');
-const { htmlDateString, readableDate } = require('./utils/dateFormatters');
+const {
+  htmlDateString,
+  readableDate,
+  readableUTCDate,
+} = require('./utils/dateFormatters');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -13,6 +17,7 @@ module.exports = function (eleventyConfig) {
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter('htmlDateString', htmlDateString());
   eleventyConfig.addFilter('readableDate', readableDate());
+  eleventyConfig.addFilter('readableUTCDate', readableUTCDate());
 
   // future default and makes intuitive sense
   // https://www.11ty.dev/docs/data-deep-merge/
