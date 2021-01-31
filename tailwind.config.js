@@ -10,6 +10,18 @@ module.exports = {
         layout: 'auto 1fr auto',
       },
       typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            h2: {
+              fontWeight: '500',
+            },
+            a: {
+              textDecoration: 'none',
+              color: 'inherit',
+              fontWeight: 'inherit',
+            },
+          },
+        },
         light: {
           css: [
             {
@@ -70,13 +82,6 @@ module.exports = {
               },
             },
           ],
-        },
-        DEFAULT: {
-          css: {
-            h2: {
-              fontWeight: '500',
-            },
-          },
         },
       }),
     },
