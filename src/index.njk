@@ -29,10 +29,8 @@ layout: layouts/base.njk
   <ul class="space-y-3">
     {% for post in posts %}
 
-    <li class="">
-      <a href="{{ post.url | url }}" class="">
-        {{ post.data.title }}
-      </a>
+    <li>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
       <span class="text-sm text-gray-500 dark:text-gray-300"> - </span>
       <time
         class="text-sm text-gray-600 font-extralight dark:text-gray-300"
@@ -51,10 +49,8 @@ layout: layouts/base.njk
   <ul class="space-y-3">
     {% for book in books %}
 
-    <li class="">
-      <a href="{{ book.url | url }}" class="">
-        {{ book.data.title }}
-      </a>
+    <li>
+      <a href="{{ book.url | url }}">{{ book.data.title }}</a>
       <span class="text-sm text-gray-500 dark:text-gray-300"> - </span>
       <time
         class="text-sm text-gray-600 font-extralight dark:text-gray-300"
