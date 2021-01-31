@@ -3,10 +3,10 @@
   publish = "dist"
 
 [context.production]
-  environment = { NODE_VERSION = "14.15.3", RUBY_VERSION = "2.7.1" }
+  environment = { NODE_VERSION = "14.15.4", RUBY_VERSION = "2.7.1" }
 
 [context.deploy-preview]
-  environment = { NODE_VERSION = "14.15.3", RUBY_VERSION = "2.7.1" }
+  environment = { NODE_VERSION = "14.15.4", RUBY_VERSION = "2.7.1" }
 
 [dev]
   command = "npm run dev"
@@ -18,7 +18,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self' https://rsms.me https://api.netlify.com; style-src 'self' https://rsms.me 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; worker-src 'self' blob:;"
+    Content-Security-Policy = "default-src 'self' https://api.netlify.com; script-src 'self' 'unsafe-eval' 'unsafe-inline'; worker-src 'self' blob:;"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
