@@ -23,24 +23,24 @@ layout: layouts/base.njk
 
 	<section>
 
-  <h2 class="mt-12 mb-3 text-xl sm:text-2xl"><a href="/blog/">Latest blog posts</a></h2>
+		<h2 class="mt-12 mb-3 text-xl sm:text-2xl"><a href="/blog/">Latest blog posts</a></h2>
 
-  {% set posts = collections.posts | reverse | batch(3) | first %}
-  <ul class="space-y-3">
-    {% for post in posts %}
+		{% set posts = collections.posts | reverse | batch(3) | first %}
+		<ul class="space-y-3">
+			{% for post in posts %}
 
-    <li>
-      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-      <span class="text-sm text-gray-500 dark:text-gray-300"> - </span>
-      <time
-        class="text-sm text-gray-600 font-extralight dark:text-gray-300"
-        datetime="{{ post.date | readableDate }}"
-        >{{ post.date | readableDate }}</time
-      >
-    </li>
+			<li>
+				<a href="{{ post.url | url }}">{{ post.data.title }}</a>
+				<span class="text-sm text-gray-500 dark:text-gray-300"> - </span>
+				<time
+					class="text-sm text-gray-600 font-extralight dark:text-gray-300"
+					datetime="{{ post.date | readableDate }}"
+					>{{ post.date | readableDate }}</time
+				>
+			</li>
 
-    {% endfor %}
-  </ul>
+			{% endfor %}
+		</ul>
 </section>
 <section>
 
