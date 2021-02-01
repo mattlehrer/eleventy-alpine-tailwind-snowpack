@@ -15,6 +15,9 @@ module.exports = {
             h2: {
               fontWeight: '500',
             },
+            h3: {
+              fontWeight: '500',
+            },
             a: {
               textDecoration: 'none',
               color: 'inherit',
@@ -45,8 +48,27 @@ module.exports = {
                 borderColor: theme('colors.gray.200'),
               },
               blockquote: {
-                color: theme('colors.gray.200'),
+                fontWeight: '300',
+                fontStyle: 'italic',
+                color: theme('colors.gray.100'),
                 borderLeftColor: theme('colors.gray.600'),
+                // hack - not sure why single quote is showing up on second blockquotes
+                quotes: '"\\201C""\\201D""\\201C""\\2019"',
+              },
+              'blockquote p:first-of-type::before': {
+                // content: 'open-quote',
+                'font-size': '5em',
+                opacity: '30%',
+                'line-height': '0.1em',
+                'margin-left': '-0.2em',
+                'margin-right': '0.15em',
+                'vertical-align': '-0.4em',
+              },
+              'blockquote p:last-of-type::after': {
+                content: 'none',
+                // 'font-size': '4em',
+                // opacity: '50%',
+                // 'line-height': '0.1em',
               },
               h1: {
                 color: theme('colors.white'),

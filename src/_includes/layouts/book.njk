@@ -3,8 +3,14 @@ layout: layouts/base.njk
 ---
 
 <article id="book" class="max-w-xl prose dark:prose-light lg:prose-lg">
-  {% image "src/books/covers/" + ISBN + ".jpg", title + "by " + author + "
-  cover", "w-80" %}
+  <div class="w-1/2">
+    {% if buy %}
+    <a href="{{ buy }}">
+      {% endif %} {% image "src/books/covers/" + ISBN + ".jpg", title + " by " +
+      author + " cover", "w-full" %} {% if buy %}
+    </a>
+    {% endif %}
+  </div>
   <h2 class="mb-0">{{ title }}</h2>
   <h3 class=""><span class="font-light">by</span> {{ author }}</h3>
   <div class="mb-8 -mt-4 text-base font-extralight">
