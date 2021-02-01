@@ -11,7 +11,7 @@ h6 {
   font-family: Jost, sans-serif;
 }
 
-main > h2 {
+main h2 {
   @apply mb-8 text-2xl sm:text-3xl;
 }
 
@@ -44,8 +44,6 @@ ol#work > li::before {
   @apply text-xs sm:text-sm font-mono;
 }
 
-/* @media (min-width: 768px) {
-  ol#work > li {
-    height: 3rem;
-  }
-} */
+#book h2 {
+  margin-bottom: 0;
+}

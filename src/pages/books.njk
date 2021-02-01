@@ -7,15 +7,33 @@ eleventyNavigation:
   order: 2
 ---
 
-<h2>Book notes and recommendations</h2>
-<p>
-	I'm in the process of moving some favorite quotes, notes, and recommendations
-	over from
-	<a href="https://www.goodreads.com/user/show/3744922-matt-lehrer">Goodreads</a
-	>. All of my reviews are there for now. My
-	<a
-		href="https://www.goodreads.com/review/list/3744922-matt-lehrer?shelf=top-ten"
-		>top 10 list</a
-	>
-	might be a great place to start.
-</p>
+<section>
+	<h2><a href="/books/">Latest book notes and recommendations</a></h2>
+	<p>
+		I'm in the process of moving some favorite quotes, notes, and recommendations
+		over from
+		<a href="https://www.goodreads.com/user/show/3744922-matt-lehrer">Goodreads</a
+		>. All of my reviews are there for now. My
+		<a
+			href="https://www.goodreads.com/review/list/3744922-matt-lehrer?shelf=top-ten"
+			>top 10 list</a
+		>
+		might be a great place to start.
+	</p>
+	
+	{% set books = collections.books | reverse | batch(3) | first %}
+  <ul class="mt-10 space-y-3">
+    {% for book in books %}
+
+			<li>
+				<a href="{{ book.url | url }}">{{ book.data.title }}</a>
+				<span class="text-sm text-gray-500 dark:text-gray-300"> - </span>
+				<time
+					class="text-sm text-gray-600 font-extralight dark:text-gray-300"
+					datetime="{{ book.date | readableDate }}"
+					>{{ book.date | readableDate }}</time
+				>
+			</li>
+
+    {% endfor %}
+</section>

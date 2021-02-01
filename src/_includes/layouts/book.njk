@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+
+<article id="book" class="max-w-xl prose dark:prose-light lg:prose-lg">
+  {% image "src/books/covers/" + ISBN + ".jpg", title + "by " + author + "
+  cover", "w-80" %}
+  <h2 class="mb-0">{{ title }}</h2>
+  <h3 class=""><span class="font-light">by</span> {{ author }}</h3>
+  <div class="mb-8 -mt-4 text-base font-extralight">
+    Posted {{ page.date | readableDate }}
+  </div>
+  <div class="font-serif font-normal dark:font-light">
+    {{ content | safe }}
+  </div>
+</article>
