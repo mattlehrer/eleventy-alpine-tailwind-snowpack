@@ -2,7 +2,7 @@
 layout: layouts/post.njk
 title: The start
 description: Getting started with blogging again
-date: 2021-01-30
+date: 2021-01-29
 created: 2021-01-29
 ---
 
