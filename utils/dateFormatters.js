@@ -3,7 +3,7 @@ const { DateTime } = require('luxon');
 function readableDate() {
   return (dateObj) => {
     return DateTime.fromJSDate(dateObj, {
-      zone: 'America/Los_Angeles',
+      zone: 'utc',
     }).toLocaleString(DateTime.DATE_MED);
   };
 }
