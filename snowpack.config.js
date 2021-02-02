@@ -1,6 +1,3 @@
-const path = require('path');
-const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
-
 module.exports = {
   mount: {
     _site: { url: '/', static: true, resolve: false },
@@ -14,28 +11,6 @@ module.exports = {
       {
         cmd: 'eleventy',
         watch: '$1 --watch',
-      },
-    ],
-    [
-      '@snowpack/plugin-webpack',
-      {
-        mode: 'production',
-        plugins: [
-          new HtmlCriticalWebpackPlugin({
-            base: path.resolve(__dirname, 'dist'),
-            src: 'index.html',
-            dest: 'index.html',
-            css: 'styles/index.css',
-            inline: true,
-            minify: true,
-            extract: true,
-            width: 375,
-            height: 812,
-            penthouse: {
-              blockJSRequests: false,
-            },
-          }),
-        ],
       },
     ],
   ],
