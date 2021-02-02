@@ -6,8 +6,8 @@ layout: layouts/base.njk
   <div class="w-1/2">
     {% if buy %}
     <a href="{{ buy }}">
-      {% endif %} {% image "src/books/covers/" + ISBN + ".jpg", title + " by " +
-      author + " cover", "w-full" %} {% if buy %}
+      {% endif %} {% if cover %} {% image "src/books/covers/" + cover, title + "
+      by " + author + " cover", "w-full" %} {% endif %} {% if buy %}
     </a>
     {% endif %}
   </div>
