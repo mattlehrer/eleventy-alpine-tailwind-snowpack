@@ -2,7 +2,7 @@
 layout: layouts/post.njk
 title: How I think about asset allocation
 description: Don't overthink it and you're not special
-date: Last Modified
+date: 2021-01-30
 created: 2021-01-30
 tags: investing
 ---

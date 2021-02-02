@@ -4,7 +4,7 @@ title: Anything You Want
 author: Derek Sivers
 ISBN: 9781591848264
 buy: https://bookshop.org/books/anything-you-want-40-lessons-for-a-new-kind-of-entrepreneur/9781591848264
-date: Last Modified
+date: 2021-01-31
 ---
 
 A quick, inspiring read by the founder of CD Baby on how he ran his business and why he sold. There are a lot of great stories on how he put his customers first, relentlessly.
