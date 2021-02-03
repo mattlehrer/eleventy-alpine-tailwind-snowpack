@@ -21,7 +21,7 @@ eleventyNavigation:
 		might be a great place to start.
 	</p>
 	
-	{% set books = collections.books | reverse | batch(3) | first %}
+	{% set books = collections.books | reverse %}
   <ul class="mt-10 space-y-3">
     {% for book in books %}
 
