@@ -1,0 +1,53 @@
+[[plugins]]
+  package = "netlify-plugin-inline-critical-css"
+
+  # All inputs are optional, so you can omit this section.
+  # Defaults are shown below.
+  [plugins.inputs]
+    # A filter used to target specific files in the publish directory. Be sure to only target HTML files. This option is passed onto the readdirp library, see https://github.com/paulmillr/readdirp#options for more info.
+    fileFilter = ["*.html"]
+
+    # A filter used to target or ignore specific directories in the publish directory. This option is passed onto the readdirp library, see https://github.com/paulmillr/readdirp#options for more info.
+    directoryFilter = ["!node_modules"]
+
+    # You can refer to `critical`’s documentation: https://github.com/addyosmani/critical for all options below.
+    # Whether to minify the generated critical-path CSS.
+    minify = false
+
+    # Whether to remove the inlined styles from any stylesheet referenced in the HTML. Use with caution. Removing the critical CSS per page results in a unique async loaded CSS file for every page, meaning you can’t rely on cache across multiple pages.
+    extract = false
+
+    # An array of objects containing `width` and `height` properties to deliver critical CSS for multiple screen resolutions.
+    dimensions = [
+      { width = 325, height = 812 },
+      { width = 1920, height = 1080 }
+    ]
+
+[[plugins]]
+package = "netlify-plugin-subfont"
+
+  [plugins.inputs]
+  # An array of glob patterns for pages on your site
+  # Recursive traversal will start from these
+  entryPoints = [
+    "*.html",
+  ]
+
+  # Follow your links across all pages to optimize the fonts across the entire site
+  recursive = true
+
+  # Subfont lets you set CSS font-display value of the optimized subsets
+  # See https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display
+  fontDisplay = "swap"
+
+  # Inline generated CSS @font-face blocks into each page
+  # When set to `false` an external CSS file will be created
+  inlineCss = false
+
+  # Inline generated font subsets into their respective @font-face blocks
+  # When set to `false` external font files will be created
+  inlineFonts = false
+
+  # Include fallbacks so the original font will be loaded when dynamic content gets injected at runtime
+  # When set to `false` external font files will be created
+  fallbacks = true
