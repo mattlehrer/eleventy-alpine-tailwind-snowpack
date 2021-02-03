@@ -17,9 +17,21 @@
   crossorigin
 />
 
-<link href="/fonts/Bitter-Light.ttf" as="font" type="font/ttf" crossorigin />
+<link
+  rel="preload"
+  href="/fonts/Bitter-Light.ttf"
+  as="font"
+  type="font/ttf"
+  crossorigin
+/>
 
-<link href="/fonts/Bitter-Regular.ttf" as="font" type="font/ttf" crossorigin />
+<link
+  rel="preload"
+  href="/fonts/Bitter-Regular.ttf"
+  as="font"
+  type="font/ttf"
+  crossorigin
+/>
 
 <style>
   @charset "UTF-8";
@@ -41,7 +53,7 @@
   }
 
   @font-face {
-    font-display: swap;
+    font-display: optional;
     font-family: 'Bitter';
     font-style: normal;
     font-weight: 300;
@@ -49,7 +61,7 @@
   }
 
   @font-face {
-    font-display: swap;
+    font-display: optional;
     font-family: 'Bitter';
     font-style: normal;
     font-weight: 400;
@@ -57,7 +69,7 @@
   }
 
   @font-face {
-    font-display: swap;
+    font-display: optional;
     font-family: 'Bitter';
     font-style: italic;
     font-weight: 400;

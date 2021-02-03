@@ -38,7 +38,7 @@ package = "netlify-plugin-subfont"
 
   # Subfont lets you set CSS font-display value of the optimized subsets
   # See https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display
-  fontDisplay = "swap"
+  fontDisplay = "optional"
 
   # Inline generated CSS @font-face blocks into each page
   # When set to `false` an external CSS file will be created
