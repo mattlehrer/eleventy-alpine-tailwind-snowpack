@@ -13,6 +13,20 @@ module.exports = {
         watch: '$1 --watch',
       },
     ],
+    [
+      'snowpack-plugin-minify-html',
+      {
+        htmlMinifierOptions: {
+          /**
+           * config options https://github.com/kangax/html-minifier#readme
+           */
+          collapseWhitespace: true,
+          removeComments: true,
+          removeEmptyAttributes: true,
+          sortAttributes: true,
+        },
+      },
+    ],
   ],
   packageOptions: {
     NODE_ENV: true,
