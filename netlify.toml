@@ -5,7 +5,7 @@
   # Defaults are shown below.
   [plugins.inputs]
     # A filter used to target specific files in the publish directory. Be sure to only target HTML files. This option is passed onto the readdirp library, see https://github.com/paulmillr/readdirp#options for more info.
-    fileFilter = ["*.html"]
+    fileFilter = ["index.html"]
 
     # A filter used to target or ignore specific directories in the publish directory. This option is passed onto the readdirp library, see https://github.com/paulmillr/readdirp#options for more info.
     directoryFilter = ["!node_modules"]
