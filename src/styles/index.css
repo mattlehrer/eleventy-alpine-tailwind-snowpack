@@ -11,8 +11,12 @@ h6 {
   font-family: Jost, sans-serif;
 }
 
-main h2 {
+h2 {
   @apply mb-8 text-2xl sm:text-3xl;
+}
+
+h3 {
+  @apply mb-2 text-xl sm:text-2xl;
 }
 
 :is(p, li) a {
