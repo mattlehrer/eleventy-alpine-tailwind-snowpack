@@ -11,7 +11,7 @@ eleventyNavigation:
 <h2>Favorite essays</h2>
 
 {% set faves = collections.essays %}
-<ul id="essays">
+<ul id="essays" class="favelist">
   {% for fave in faves | reverse %}
   <li class="mb-8 sm:text-lg">
     <a href="{{ fave.data.url }}">{{ fave.data.title }}</a>

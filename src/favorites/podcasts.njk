@@ -11,11 +11,12 @@ eleventyNavigation:
 <h2>Favorite podcasts</h2>
 
 {% set faves = collections.podcasts %}
-<ul>
-  {% for fave in faves %}
-  <li class="mb-6 sm:text-lg">
-    <a href="{{ fave.data.url }}">{{ fave.data.title }}</a> -
-    {{ fave.data.description }}
+
+<ul id="podcasts" class="favelist">
+  {% for fave in faves | reverse %}
+  <li class="mb-8 sm:text-lg">
+    <a href="{{ fave.data.url }}">{{ fave.data.title }}</a>
+    {{ fave.templateContent | safe }}
   </li>
   {% endfor %}
 </ul>
