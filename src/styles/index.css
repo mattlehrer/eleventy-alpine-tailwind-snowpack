@@ -50,3 +50,7 @@ ol#work > li::before {
 #book h2 {
   margin-bottom: 0;
 }
+
+#essays > li > p {
+  @apply pl-6 mt-2;
+}

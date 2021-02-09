@@ -1,0 +1,24 @@
+---
+title: Essays
+layout: layouts/base.njk
+description: The blog posts and articles that I think about and share most
+eleventyNavigation:
+  key: Essays
+  parent: Favorites
+  order: 1
+---
+
+<h2>Favorite essays</h2>
+
+{% set faves = collections.essays %}
+<ul id="essays">
+  {% for fave in faves | reverse %}
+  <li class="mb-8 sm:text-lg">
+    <a href="{{ fave.data.url }}">{{ fave.data.title }}</a>
+    <span class="font-extralight">by</span>
+    {{ fave.data.author }}
+    <span class="font-extralight">from {{ fave.date | readableDate }}</span>
+    {{ fave.templateContent | safe }}
+  </li>
+  {% endfor %}
+</ul>

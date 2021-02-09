@@ -18,6 +18,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('readableDate', readableDate());
   eleventyConfig.addFilter('readableUTCDate', readableUTCDate());
 
+  eleventyConfig.addCollection('faveCategories', function (collectionApi) {
+    return collectionApi.getFilteredByTag('favorites').filter((fave) => {
+      return fave.data.tags.length === 1;
+    });
+  });
+
   // future default and makes intuitive sense
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);

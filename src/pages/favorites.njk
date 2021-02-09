@@ -9,5 +9,11 @@ eleventyNavigation:
 
 <h2>Recommendations in everything</h2>
 
-<h3>Podcasts</h3>
-<p>I listen to a lot of podcasts. I'll post my favorites soon.</p>
+<ul>
+  {% for fave in collections.faveCategories %}
+  <li class="mb-6 sm:text-lg">
+    <a href="{{ fave.url }}">{{ fave.data.title }}</a>
+    - {{ fave.data.description }}
+  </li>
+  {% endfor %}
+</ul>
