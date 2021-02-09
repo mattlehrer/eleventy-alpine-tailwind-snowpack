@@ -1,4 +1,3 @@
-const fs = require('fs');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const { imageShortcode } = require('./utils/imageShortcode');
 const {
