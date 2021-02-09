@@ -1,7 +1,12 @@
 const Image = require('@11ty/eleventy-img');
 
 async function imageShortcode(src, alt, classList, sizes) {
-  let metadata = await Image(src, {
+  const isOnNetlify =
+    process.env.CONTEXT === 'production' ||
+    process.env.CONTEXT === 'deploy-preview' ||
+    process.env.CONTEXT === 'branch-deploy';
+
+  const metadata = await Image(src, {
     widths: [
       25,
       80,
@@ -18,13 +23,13 @@ async function imageShortcode(src, alt, classList, sizes) {
       1600,
       1920,
     ],
-    formats: ['avif', 'webp', null],
+    formats: isOnNetlify ? ['avif', 'webp', null] : [null],
     svgShortCircuit: true,
     outputDir: '_site/images/',
     urlPath: '/images/',
   });
 
-  let imageAttributes = {
+  const imageAttributes = {
     alt,
     sizes,
     class: classList,
