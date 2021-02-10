@@ -2,6 +2,8 @@
 
 Ready for deploying to Netlify with build plugins for inlining CSS and font file optimizations.
 
+Check out the [demo](https://eleventy-alpine-tailwind-snowpack-demo.netlify.app/)
+
 ## TODO
 
 - [x] [Eleventy Image plugin](https://www.11ty.dev/docs/plugins/image/)
