@@ -8,7 +8,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Jost, sans-serif;
+  font-family: sans-serif;
 }
 
 h2 {
@@ -20,11 +20,11 @@ h3 {
 }
 
 :is(p, li) a {
-  @apply px-px border-b-2 border-yellow-500 border-dotted hover:rounded-sm hover:border-0 hover:bg-yellow-500 hover:text-gray-50 dark:hover:bg-yellow-600;
+  @apply px-px underline hover:rounded-sm hover:border-0 hover:bg-blue-500 hover:text-gray-50 dark:hover:bg-blue-600;
 }
 
-p#nav a {
-  @apply inline-flex items-center pt-1 border-b-2 text-sm font-medium hover:bg-transparent hover:text-current;
+#nav a {
+  @apply inline-flex items-center pt-1 border-b text-sm font-medium hover:bg-transparent hover:text-current;
 }
 
 footer a {

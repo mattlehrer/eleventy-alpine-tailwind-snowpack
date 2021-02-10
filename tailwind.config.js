@@ -3,9 +3,6 @@ module.exports = {
   darkMode: 'media',
   theme: {
     extend: {
-      fontFamily: {
-        serif: ['Bitter', 'ui-serif', 'serif'],
-      },
       gridTemplateRows: {
         layout: 'auto 1fr auto',
       },

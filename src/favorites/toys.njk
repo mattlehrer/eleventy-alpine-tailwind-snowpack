@@ -1,16 +1,16 @@
 ---
-title: Podcasts
+title: Toys
 layout: layouts/base.njk
-description: The ones that I consistently want to listen to whenever a new episode shows up in my feed
+description: My favorite toys
 eleventyNavigation:
-  key: Podcasts
+  key: Toys
   parent: Favorites
   order: 1
 ---
 
-<h2>Favorite podcasts</h2>
+<h2>Favorite toys</h2>
 
-{% set faves = collections.podcasts %}
+{% set faves = collections.toys %}
 
 <ul id="podcasts" class="favelist">
   {% for fave in faves | reverse %}

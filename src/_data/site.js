@@ -1,11 +1,11 @@
 module.exports = {
-  title: 'mattlehrer.com',
-  description: "Matt Lehrer's Personal Site",
-  url: 'https://www.mattlehrer.com',
-  author: 'Matt Lehrer',
+  title: 'Your Site Title',
+  description: 'Your Site',
+  url: 'https://www.example.com',
+  author: 'You',
   metadata: {
-    twitter: '@mattlehrer',
-    default_img: '/images/default_img.png',
+    twitter: '@you',
+    default_img: '/images/default_img.jpg',
   },
   env: process.env.ELEVENTY_ENV === 'production',
 };

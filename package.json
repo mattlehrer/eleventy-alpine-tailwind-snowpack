@@ -1,6 +1,6 @@
 {
-  "name": "mattlehrer.com-eleventy",
-  "description": "code for mattlehrer.com built with eleventy, tailwind, alpinejs, and snowpack.",
+  "name": "personal-site-template-11ty-tailwind-snowpack-alpine",
+  "description": "personal site template built with eleventy, tailwind, alpinejs, and snowpack.",
   "author": {
     "name": "Matt Lehrer",
     "email": "hi@mattlehrer.com"
@@ -26,16 +26,16 @@
   "version": "1.0.0",
   "engines": {
     "node": "14.x.x",
-    "npm": "6.x.x"
+    "npm": "7.x.x"
   },
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:mattlehrer/mattlehrer.com-eleventy-snowpack"
+    "url": "git@github.com:mattlehrer/thehitchcockgrp-com"
   },
   "license": "ISC",
   "private": true,
-  "homepage": "https://www.mattlehrer.com",
+  "homepage": "https://www.thehitchcockgrp.com/",
   "browserslist": [
     "defaults",
     "maintained node versions",

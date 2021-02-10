@@ -1,5 +1,5 @@
 module.exports = {
-  cacheId: 'mattlehrerdotcom',
+  cacheId: 'yoursite',
   globDirectory: 'dist/',
   globPatterns: ['**/*.{css,js,json}'],
   swDest: 'dist/sw.js',
