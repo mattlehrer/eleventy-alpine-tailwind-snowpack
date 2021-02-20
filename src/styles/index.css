@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*:focus {
+  @apply outline-none ring-2 ring-gray-800 dark:ring-gray-100 ring-offset-2 dark:ring-offset-gray-800 rounded-sm border-transparent;
+}
+
 h1,
 h2,
 h3,
