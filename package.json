@@ -73,7 +73,7 @@
     "stylelint-order": "^4.1.0",
     "tailwindcss": "^2.0.3",
     "tailwindcss-debug-screens": "^2.0.0",
-    "workbox-cli": "^6.1.0"
+    "workbox-cli": "^6.1.1"
   },
   "dependencies": {
     "alpinejs": "^2.8.0",
