@@ -65,7 +65,7 @@
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "serve": "^11.3.2",
-    "snowpack": "^3.0.11",
+    "snowpack": "^3.0.13",
     "snowpack-plugin-minify-html": "^0.1.1",
     "stylelint": "^13.11.0",
     "stylelint-config-prettier": "^8.0.2",
