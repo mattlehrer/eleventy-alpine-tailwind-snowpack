@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 *:focus {
-  @apply outline-none ring-2 ring-gray-800 dark:ring-gray-100 ring-offset-2 dark:ring-offset-gray-800 rounded-sm border-transparent;
+  @apply outline-none ring-2 ring-gray-800 dark:ring-gray-100 ring-offset-2 dark:ring-offset-gray-800 rounded-sm border-transparent no-underline;
 }
 
 h1,
@@ -49,10 +49,6 @@ ol#work > li::before {
   content: attr(seq);
   display: table-cell;
   @apply text-xs sm:text-sm font-mono;
-}
-
-#book h2 {
-  margin-bottom: 0;
 }
 
 .favelist > li > p {
