@@ -19,9 +19,24 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('readableUTCDate', readableUTCDate());
 
   eleventyConfig.addCollection('faveCategories', function (collectionApi) {
-    return collectionApi.getFilteredByTag('favorites').filter((fave) => {
-      return fave.data.tags.length === 1;
+    const allFavorites = collectionApi.getFilteredByTag('favorites');
+    let categories = allFavorites.filter((fave) => {
+      return fave.data.tags.filter((tag) => tag !== 'posts').length === 1;
     });
+    categories = categories
+      .map((category) => {
+        // replace category date with latest category element date
+        // the category title -> toLowerCase is the tag
+        category.date = collectionApi
+          .getFilteredByTag(category.data.title.toLowerCase())
+          .reduce(
+            (acc, curr) => (acc > curr.data.date ? acc : curr.data.date),
+            category.date,
+          );
+        return category;
+      })
+      .sort((a, b) => a.date - b.date);
+    return categories;
   });
 
   // future default and makes intuitive sense
