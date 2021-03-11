@@ -43,7 +43,7 @@
   ],
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "@11ty/eleventy-img": "^0.8.0",
+    "@11ty/eleventy-img": "^0.8.2",
     "@11ty/eleventy-navigation": "^0.1.6",
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
