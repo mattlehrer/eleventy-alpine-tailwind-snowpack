@@ -21,7 +21,8 @@
     "format:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.njk src/**/*.css --fix",
     "format:prettier": "prettier --write .",
     "validate": "run-s build lint",
-    "setup": "npm install && npm run validate"
+    "setup": "npm install && npm run validate",
+    "benchmark": "DEBUG=Eleventy:Benchmark* eleventy"
   },
   "version": "1.0.0",
   "engines": {
