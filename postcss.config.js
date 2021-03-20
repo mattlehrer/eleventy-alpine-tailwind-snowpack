@@ -9,7 +9,7 @@ module.exports = {
         'nesting-rules': true,
       },
     }),
-    require('tailwindcss'),
+    require('@tailwindcss/jit'),
     require('autoprefixer'),
   ],
 };
